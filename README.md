@@ -5,8 +5,8 @@ raspbian lite image für den raspberry pi: https://downloads.raspberrypi.org/ras
 ---
 
 1. per ssh mit pi verbinden
-2. git clone
-3. `<IP-VOM-PI>` in `upload.html` anpassen
-4. `bash setup.sh`
+2. `bash setup.sh`
+3. git clone
+4. `<IP-VOM-PI>` in `upload.html` anpassen
 5. `npm install`
 6. `node index.js`
