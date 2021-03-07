@@ -4,16 +4,9 @@ raspbian lite image für den raspberry pi: https://downloads.raspberrypi.org/ras
 
 ---
 
-`setup.sh` in `/home/pi` erstellen und ausführen oder Befehle manuell ausführen
-
-`compup.sh` zum kompilieren und hochladen des sketches auf die MCU in `/home/pi/uploads/sketch`erstellen und mit `chmod +x compup.sh`ausführbar machen
-
-`upload.html` in `/home/pi` erstellen
-
-`index.js` in `/home/pi` erstellen
-
----
-
-in `/home/pi` mit `node index.js` server starten
-
-auf `http://<IP-VOM-PI>/upload` einen beliebigen sketch mit dem namen `sketch.ino` hochladen
+1. per ssh mit pi verbinden
+2. git clone
+3. `<IP-VOM-PI` in `upload.html` anpassen
+4. `bash setup.sh`
+5. `npm install`
+6. `node index.js`
