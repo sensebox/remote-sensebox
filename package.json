@@ -1,0 +1,24 @@
+{
+  "name": "remote-sensebox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sensebox/remote-sensebox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sensebox/remote-sensebox/issues"
+  },
+  "homepage": "https://github.com/sensebox/remote-sensebox#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "shelljs": "^0.8.4"
+  }
+}
