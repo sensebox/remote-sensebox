@@ -2,8 +2,6 @@
 
 sudo apt-get update
 
-sudo apt-get install git
-
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
 sudo mv bin/arduino-cli /usr/local/bin
 sudo rm -r bin
@@ -16,10 +14,3 @@ git clone https://github.com/arduino-libraries/SD /home/pi/.arduino15/packages/s
 sudo apt-get install nodejs
 
 sudo apt-get install npm
-
-npm init
-
-npm install express express-fileupload shelljs
-
-mkdir uploads
-mkdir uploads/sketch
