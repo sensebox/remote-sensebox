@@ -11,6 +11,6 @@ arduino-cli --additional-urls https://gist.githubusercontent.com/ubergesundheit/
 
 git clone https://github.com/arduino-libraries/SD /home/pi/.arduino15/packages/sensebox/hardware/samd/1.3.3/libraries/SD
 
-sudo apt-get install nodejs
+sudo apt-get install nodejs -y
 
-sudo apt-get install npm
+sudo apt-get install npm -y
