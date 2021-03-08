@@ -5,8 +5,10 @@ raspbian lite image für den raspberry pi: https://downloads.raspberrypi.org/ras
 ---
 
 1. per ssh mit pi verbinden
-2. git clone
-3. `bash setup.sh`
-4. `<IP-VOM-PI>` in `upload.html` anpassen
-5. `npm install`
-6. `node index.js`
+2. `sudo apt-get upgrade && sudo apt-get upgrade`
+3. `sudo apt install git` & `git clone https://github.com/sensebox/remote-sensebox`
+4. cd into ``remote-sensebox
+5. `bash setup.sh`
+6. `<IP-VOM-PI>` in `upload.html` anpassen (`ifconfig`)
+7. `npm install`
+8. `node index.js`
