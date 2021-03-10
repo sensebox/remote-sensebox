@@ -3,6 +3,7 @@ const fileUpload = require('express-fileupload');
 const app = express();
 const port = 3000;
 const shell = require('shelljs');
+const fs = require('fs');
 
 // default options
 app.use(fileUpload());
@@ -26,6 +27,7 @@ app.post('/upload', function(req, res) {
     if (err)
       return res.status(500).send(err);
 
+    fs.renameSync(uploadPath , '/home/pi/remote-sensebox/uploads/sketch/sketch.ino');
     shell.exec('arduino-cli compile --upload ' + __dirname + '/uploads/sketch/sketch.ino --port /dev/ttyACM0 --fqbn sensebox:samd:sb')
     res.send('File uploaded!');
   });
