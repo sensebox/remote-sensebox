@@ -26,7 +26,7 @@ app.post('/upload', function(req, res) {
     if (err)
       return res.status(500).send(err);
 
-    shell.exec('./uploads/sketch/compup.sh')
+    shell.exec('arduino-cli compile --upload ' + __dirname + '/uploads/sketch/sketch.ino --port /dev/ttyACM0 --fqbn sensebox:samd:sb')
     res.send('File uploaded!');
   });
 });
