@@ -8,8 +8,7 @@ raspbian lite image für den raspberry pi: https://downloads.raspberrypi.org/ras
 2. `sudo apt-get update -y && sudo apt-get upgrade -y`
 3. `sudo apt install git -y` & `git clone https://github.com/sensebox/remote-sensebox`
 4. `cd remote-sensebox`
-5. `chmod +x uploads/sketch/compup.sh `
-6. `bash setup.sh`
-7. `<IP-VOM-PI>` in `upload.html` anpassen (`ifconfig`)
-8. `npm install`
-9. `node index.js`
+5. `bash setup.sh`
+6. `<IP-VOM-PI>` in `upload.html` anpassen (`ifconfig`)
+7. `npm install`
+8. `node index.js`
