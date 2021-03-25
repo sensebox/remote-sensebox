@@ -14,3 +14,5 @@ git clone https://github.com/arduino-libraries/SD /home/pi/.arduino15/packages/s
 sudo apt-get install nodejs -y
 
 sudo apt-get install npm -y
+
+mkdir uploads
