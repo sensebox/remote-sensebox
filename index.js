@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 const shell = require('shelljs');
 const fs = require('fs');
-const cron = require('node-cron');
+const CronJob = require('cron').CronJob;
 
 app.use(fileUpload());
 
@@ -30,37 +30,26 @@ app.post('/upload', function (req, res) {
   });
 });
 
-cron.schedule('* * * * *', () => {
+var job = new CronJob('* 1 * * * *', function () {
   folders = fs.readdirSync(__dirname + '/uploads/');
-  var oldest = folders[0];
+  var oldestTime;
+  var oldest;
 
-  if (folders.length > 1) {
-    for (var i = 1; i < folders.length; i++) {
-      fs.statSync(__dirname + '/uploads/' + folders[i], (err, stats) => {
-        if (err) {
-          console.log(err);
-        }
-        else {
-          if (stats.birttimeMs > oldest.birthtimeMs) {
-            oldest = folders[i];
-          }
-        }
-      })
+  for (var i = 0; i < folders.length; i++) {
+    let stats = fs.statSync(__dirname + '/uploads/' + folders[i]);
+    if (oldestTime == undefined || stats.mtime < oldestTime) {
+      oldestTime = stats.mtime;
+      oldest = folders[i];
     }
   }
-  shell.exec('ls ' + __dirname + '/uploads/')
-  if(oldest != undefined) {
-    // compile sketch and flash mcu
+  if (oldest != undefined) {
+    //compile sketch and flash mcu
     shell.exec('arduino-cli compile --upload ' + __dirname + '/uploads/' + oldest + '/' + oldest + '.ino' + ' --port /dev/ttyACM0 --fqbn sensebox:samd:sb');
     // delete folder with sketch
     shell.exec('rm -r ' + __dirname + '/uploads/' + oldest);
-    shell.exec('ls ' + __dirname + '/uploads/')
   }
-});
-
-
-
-
+}, null, true, 'America/Los_Angeles');
+job.start();
 
 app.listen(port,
   () => console.log(`Example app
