@@ -30,7 +30,7 @@ app.post('/upload', function (req, res) {
   });
 });
 
-var job = new CronJob('* 1 * * * *', function () {
+var job = new CronJob('1 * * * * *', function () {
   folders = fs.readdirSync(__dirname + '/uploads/');
   var oldestTime;
   var oldest;
