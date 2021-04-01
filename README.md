@@ -5,6 +5,7 @@ raspbian lite image für den raspberry pi: https://downloads.raspberrypi.org/ras
 ---
 stream 
 -----------------------------
+* * `sudo apt-get update -y && sudo apt-get upgrade -y`
 * im `raspi-config` kamera aktivieren
 * reboot
 * `sudo apt install libevent-dev libjpeg8-dev libbsd-dev`
@@ -14,7 +15,6 @@ stream
 
 mcu
 ---
-* `sudo apt-get update -y && sudo apt-get upgrade -y`
 * `sudo apt-get install git -y` & `git clone https://github.com/sensebox/remote-sensebox`
 * `cd remote-sensebox`
 * `bash setup.sh`
