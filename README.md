@@ -8,14 +8,14 @@ stream
 * * `sudo apt-get update -y && sudo apt-get upgrade -y`
 * im `raspi-config` kamera aktivieren
 * reboot
-* `sudo apt install libevent-dev libjpeg8-dev libbsd-dev`
+* `sudo apt install git libevent-dev libjpeg8-dev libbsd-dev -y `
 * `git clone --depth=1 https://github.com/pikvm/ustreamer`
 * `make -C ustreamer`
 * stream starten: `sudo ./ustreamer/ustreamer --device=/dev/video0 --host=0.0.0.0 --port=80`
 
 mcu
 ---
-* `sudo apt-get install git -y` & `git clone https://github.com/sensebox/remote-sensebox`
+* `git clone https://github.com/sensebox/remote-sensebox`
 * `cd remote-sensebox`
 * `bash setup.sh`
 * `<IP-VOM-PI>` in `upload.html` anpassen
