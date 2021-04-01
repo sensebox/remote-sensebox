@@ -5,7 +5,7 @@ raspbian lite image für den raspberry pi: https://downloads.raspberrypi.org/ras
 ---
 stream 
 -----------------------------
-* * `sudo apt-get update -y && sudo apt-get upgrade -y`
+* `sudo apt-get update -y && sudo apt-get upgrade -y`
 * im `raspi-config` kamera aktivieren
 * reboot
 * `sudo apt install git libevent-dev libjpeg8-dev libbsd-dev -y `
