@@ -18,6 +18,6 @@ mcu
 * `sudo apt-get install git -y` & `git clone https://github.com/sensebox/remote-sensebox`
 * `cd remote-sensebox`
 * `bash setup.sh`
-* `<IP-VOM-PI>` in `upload.html` anpassen (`ifconfig`)
+* `<IP-VOM-PI>` in `upload.html` anpassen
 * `npm install`
 * `node index.js`
